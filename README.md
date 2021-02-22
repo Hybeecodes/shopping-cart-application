@@ -1,4 +1,4 @@
-# Bems-Ibi-Obi
+# Shopping Cart Application - Paystack Assessment Test
 
 ## Requirements
 
