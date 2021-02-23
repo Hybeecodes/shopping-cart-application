@@ -34,4 +34,7 @@ export enum ErrorMessages {
   QUESTION_SUBSCRIPTION_FAILED = 'Question Subscription Failed',
   GET_QUESTION_SUBSCRIPTION_FAILED = 'Get Question Subscriptions Failed',
   QUESTION_UNSUBSCRIPTION_FAILED = 'Unable to Unsubscribe from Question',
+  ADD_TO_CART_FAILED = 'Unable to Add Product to Cart',
+  GET_USER_CART_FAILED = 'Unable to Get User Cart',
+  CLEAR_CART_FAILED = 'Unable to Clear User Cart'
 }
