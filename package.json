@@ -1,7 +1,7 @@
 {
   "name": "shopping-cart-application",
   "version": "1.0.0",
-  "description": "A imple Shopping Cart Application",
+  "description": "A Simple Shopping Cart Application",
   "scripts": {
     "start": "node dist/src/server.js",
     "prestart": "npm run build-ts",
