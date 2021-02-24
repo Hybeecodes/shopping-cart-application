@@ -1,14 +1,13 @@
-import {IsDefined, IsNotEmpty, IsNumber} from "class-validator";
+import { IsDefined, IsNotEmpty, IsNumber } from 'class-validator';
 
 export class AddProductToCartRequestDto {
+  @IsDefined()
+  @IsNotEmpty()
+  @IsNumber()
+  productId: number;
 
-    @IsDefined()
-    @IsNotEmpty()
-    @IsNumber()
-    productId: number;
-
-    @IsDefined()
-    @IsNotEmpty()
-    @IsNumber()
-    quantity: number;
+  @IsDefined()
+  @IsNotEmpty()
+  @IsNumber()
+  quantity: number;
 }

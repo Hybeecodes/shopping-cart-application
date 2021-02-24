@@ -6,7 +6,6 @@ import CartRouter from './cart.route';
 const router = Router();
 const homeController = new HomeController();
 
-
 router.get('/', homeController.index);
 
 router.use('/auth', AuthRouter);

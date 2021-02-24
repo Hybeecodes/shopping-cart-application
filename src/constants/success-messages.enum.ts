@@ -4,6 +4,7 @@ export enum SuccessMessages {
   FORGOT_PASSWORD_SUCCESS = 'Resent Link Sent Successfully',
   RESET_PASSWORD_SUCCESS = 'Password Reset Successful',
   ADD_TO_CART_SUCCESS = 'Product Added to Cart Successfully',
-  GET_CART_SUCCESS = 'Fetch User Cart Successfully',
+  GET_CART_SUCCESS = 'Fetch User Cart Successful',
+  CLEAR_CART_SUCCESS = 'Clear User Cart Successfully',
   WELCOME_HOME = 'Welcome Home',
 }

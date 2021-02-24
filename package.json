@@ -4,7 +4,7 @@
   "description": "A Simple Shopping Cart Application",
   "scripts": {
     "start": "node dist/src/server.js",
-    "start:dev": "nodemon dist/src/server.js",
+    "start:dev": "concurrently \"npm run watch-ts\" \"nodemon dist/src/server.js\"",
     "prestart": "npm run build-ts",
     "build-ts": "npm run clean && tsc",
     "clean": "rimraf dist/",
@@ -75,6 +75,7 @@
     "@types/winston": "^2.4.4",
     "@typescript-eslint/eslint-plugin": "^4.4.1",
     "@typescript-eslint/parser": "^4.4.1",
+    "concurrently": "^6.0.0",
     "eslint": "^7.11.0",
     "eslint-config-prettier": "^6.13.0",
     "eslint-plugin-prettier": "^3.1.4",
