@@ -4,6 +4,7 @@
   "description": "A Simple Shopping Cart Application",
   "scripts": {
     "start": "node dist/src/server.js",
+    "start:dev": "concurrently \"npm run watch-ts\" \"nodemon dist/src/server.js\"",
     "prestart": "npm run build-ts",
     "build-ts": "npm run clean && tsc",
     "clean": "rimraf dist/",
@@ -42,6 +43,7 @@
   },
   "author": "Ibiniyi Obikoya",
   "dependencies": {
+    "@types/redis": "^2.8.28",
     "bcrypt": "^5.0.0",
     "class-transformer": "^0.3.2",
     "class-validator": "^0.13.1",
@@ -54,6 +56,7 @@
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.2.5",
     "nanoid": "^3.1.20",
+    "redis": "^3.0.2",
     "reflect-metadata": "^0.1.13",
     "sequelize": "^6.4.0",
     "supertest": "^6.1.3",
@@ -72,6 +75,7 @@
     "@types/winston": "^2.4.4",
     "@typescript-eslint/eslint-plugin": "^4.4.1",
     "@typescript-eslint/parser": "^4.4.1",
+    "concurrently": "^6.0.0",
     "eslint": "^7.11.0",
     "eslint-config-prettier": "^6.13.0",
     "eslint-plugin-prettier": "^3.1.4",

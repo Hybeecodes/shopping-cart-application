@@ -23,6 +23,11 @@ export = {
                 allowNull: false,
                 type: DataTypes.STRING
             },
+            resetCode: {
+                allowNull: true,
+                type: DataTypes.STRING,
+                defaultValue: null
+            },
             isDeleted: {
                 allowNull: false,
                 type: DataTypes.BOOLEAN,

@@ -3,6 +3,7 @@ import express from 'express';
 import IndexRouter from './routes/index';
 
 import { databaseService } from './utils/database';
+
 import errorHandler from './utils/middlewares/error.handler';
 
 // Create Express server
