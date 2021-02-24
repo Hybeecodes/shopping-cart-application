@@ -9,8 +9,11 @@ import {AuthGuardMiddleware} from "../utils/middlewares/auth-guard.middleware";
 import {JwtService} from "../utils/jwt/jwt.service";
 import {UserService} from "../services/user.service";
 import {UserRepository} from "../repositories/user.repository";
+import {ProductService} from "../services/product.service";
+import {ProductRepository} from "../repositories/product.repository";
 
-const cartService = new CartService(new RedisService(), new WinstonLogger('Cart Module'));
+const productService = new ProductService(new ProductRepository(), new WinstonLogger('Product Module'));
+const cartService = new CartService(new RedisService(),productService, new WinstonLogger('Cart Module'));
 const cartController = new CartController(cartService);
 
 const userRepository = new UserRepository();

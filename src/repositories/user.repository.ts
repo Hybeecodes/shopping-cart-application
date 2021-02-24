@@ -3,11 +3,11 @@ import { User } from '../../db/models/user';
 import { IUser } from '../interfaces/user.interface';
 
 export class UserRepository implements IUserRepository {
-  update(t: IUser, id: number): Promise<IUser> {
+  update(t: IUser, id: number): Promise<boolean> {
     return new Promise(async (resolve, reject) => {
       try {
-        const updated = await User.update({ ...t }, { where: { id, isDeleted: false } });
-        resolve(updated as IUser);
+        await User.update({ ...t }, { where: { id, isDeleted: false } });
+        resolve(true);
       } catch (e) {
         reject(e);
       }

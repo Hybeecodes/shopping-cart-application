@@ -15,6 +15,7 @@ export enum ErrorMessages {
   NO_AUTH_ERROR = 'No Auth Supplied',
   INVALID_AUTH_TOKEN_SUPPLIED = 'Invalid Auth Token Supplied',
   ADD_TO_CART_FAILED = 'Unable to Add Product to Cart',
+  INVALID_PRODUCT_QUANTITY = 'Invalid Quantity',
   GET_USER_CART_FAILED = 'Unable to Get User Cart',
   CLEAR_CART_FAILED = 'Unable to Clear User Cart',
   GET_PRODUCT_BY_ID_FAILED = 'Unable to get Product by Id',

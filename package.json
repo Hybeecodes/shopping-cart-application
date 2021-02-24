@@ -4,6 +4,7 @@
   "description": "A Simple Shopping Cart Application",
   "scripts": {
     "start": "node dist/src/server.js",
+    "start:dev": "nodemon dist/src/server.js",
     "prestart": "npm run build-ts",
     "build-ts": "npm run clean && tsc",
     "clean": "rimraf dist/",

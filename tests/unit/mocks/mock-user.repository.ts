@@ -61,7 +61,7 @@ export class MockUserRepository implements IUserRepository {
     return Promise.resolve(undefined);
   }
 
-  update(t: IUser, id: number): Promise<IUser> {
+  update(t: IUser, id: number): Promise<boolean> {
     return Promise.resolve(undefined);
   }
 }
