@@ -18,6 +18,7 @@ export enum ErrorMessages {
   INVALID_PRODUCT_QUANTITY = 'Invalid Quantity',
   GET_USER_CART_FAILED = 'Unable to Get User Cart',
   CLEAR_CART_FAILED = 'Unable to Clear User Cart',
+  REMOVE_PRODUCT_FORM_CART_FAILED = 'Unable to Remove Product From Cart',
   GET_PRODUCT_BY_ID_FAILED = 'Unable to get Product by Id',
   PRODUCT_NOT_FOUND = 'Product Not Found',
 }

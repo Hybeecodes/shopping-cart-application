@@ -30,4 +30,6 @@ router.get('/', authMiddleware.authenticate, cartController.get);
 
 router.delete('/', authMiddleware.authenticate, cartController.clear);
 
+router.delete('/products/:productId', authMiddleware.authenticate, cartController.removeFromCart);
+
 export default router;

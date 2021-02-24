@@ -45,4 +45,20 @@ export class CartController {
       next(e);
     }
   };
+
+  removeFromCart: RequestHandler = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const userId = req['user']['id'];
+      const productId = parseInt(req.params.productId);
+      const response = await this.cartService.removeProductFromCart(userId, productId);
+      const resObj = new ResponseDto(
+        ResponseStatus.SUCCESS,
+        SuccessMessages.REMOVE_PRODUCT_FROM_CART_SUCCESS,
+        response
+      );
+      return res.status(HttpStatus.OK).send(resObj);
+    } catch (e) {
+      next(e);
+    }
+  };
 }

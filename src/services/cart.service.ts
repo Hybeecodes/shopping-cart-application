@@ -87,7 +87,23 @@ export class CartService {
     }
   }
 
-  async updateUserCart(userId: number) {}
+  async removeProductFromCart(userId: number, productId: number): Promise<void> {
+    // ensure that product exist
+    await this.productService.getProductById(productId); // TODO:: Not Sure this is necessary
+    try {
+      const cartKey = CartService.generateUserCartKey(userId);
+      const cartDataStr = await this.redisService.get(cartKey);
+      const cartData: CartItem[] = JSON.parse(cartDataStr);
+      // remove product from cart data
+      const newCartData = cartData.filter((c) => {
+        return c.productId !== productId;
+      });
+      await this.redisService.set(cartKey, JSON.stringify([...newCartData]));
+    } catch (e) {
+      this.logger.error(`${ErrorMessages.REMOVE_PRODUCT_FORM_CART_FAILED}: ${e}`);
+      throw new HttpException(ErrorMessages.REMOVE_PRODUCT_FORM_CART_FAILED, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+  }
 
   static generateUserCartKey(userId: number): string {
     return `USER_${userId}`;
