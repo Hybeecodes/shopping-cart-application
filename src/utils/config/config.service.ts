@@ -11,8 +11,8 @@ class ConfigService implements ConfigInterface {
     this.config = process.env;
   }
 
-  get<T = any>(propertyPath: string): T | undefined {
-    return this.config[propertyPath] as T;
+  get<T = any>(propertyPath: string, defaultValue?: T): T | undefined {
+    return this.config[propertyPath] as T || defaultValue;
   }
 
   static getInstance(): ConfigService {
