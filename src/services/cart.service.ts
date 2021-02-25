@@ -69,7 +69,7 @@ export class CartService {
     try {
       const cartKey = CartService.generateUserCartKey(userId);
       const data = await this.redisService.get(cartKey);
-      const cardData: CartItem[] = JSON.parse(data);
+      const cardData: CartItem[] = JSON.parse(data) || [];
       return this.generateUserCartObject(cardData);
     } catch (e) {
       this.logger.error(`${ErrorMessages.GET_USER_CART_FAILED}: ${e}`);
