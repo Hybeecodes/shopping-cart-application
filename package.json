@@ -84,6 +84,7 @@
     "prettier": "^2.1.2",
     "rimraf": "^3.0.2",
     "sequelize-cli": "^6.2.0",
+    "sequelize-cli-typescript": "^3.2.0-c",
     "ts-jest": "^26.4.4",
     "tslint": "^5.20.1"
   }
