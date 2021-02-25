@@ -15,7 +15,7 @@ export = {
             });
         }
         demoUsers.push({
-            email: `demoKorayUser@mailinator.com`,
+            email: `paystackUser@mailinator.com`,
             password: bcrypt.hashSync('password', 10), // all demo users password = 'password'
             displayName: 'Demo User'
         });
