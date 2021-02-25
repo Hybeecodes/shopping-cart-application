@@ -2,7 +2,7 @@
 
 ## Requirements
 
-For development, you will only need Node.js, a node global package, npm, and MySQL installed in your development environment.
+For development, you will only need Node.js, a node global package, npm, MySQL and Redis installed in your development environment.
 
 ### Node
 - #### Node installation on Windows
@@ -21,6 +21,11 @@ For development, you will only need Node.js, a node global package, npm, and MyS
 - ### Installation
   
   Visit [MySQL official documentation](https://dev.mysql.com/doc/mysql-installer/en/) for installation guide.
+
+### Redis
+- ### Installation
+
+  Visit [Redis official website](https://redis.io/) for installation guide.
 ---
 
 ## Install
@@ -46,17 +51,18 @@ The ```setup.sh``` file does the following:
 
 
 ## Assumption
-*
+- Only the Cart Module is to be implemented
 
 
 ## Run app
 
 - Run ```npm start``` to start the app (app runs on PORT 8081 by default).
 - Run ```npm test``` to run test.
-- [Published Postman Collection URL]()
+- [Published Postman Collection URL](https://documenter.getpostman.com/view/2687229/TWDcEEZj)
 
-## Challenges Faced
-- 
+## Design & Implementation Decisions
+- Cart data was stored in redis for faster access and better performance. 
+-
 
 ## Feedback on Assessment
 The Assessment was a very good one. 
