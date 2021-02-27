@@ -8,13 +8,13 @@ import { SuccessMessages } from '../../src/constants/success-messages.enum';
 
 describe('Authentication Module', () => {
   afterAll(async () => {
-    await User.destroy({ where: { email: 'testKorayUser@mailinator.com' } }); // remove created record
+    await User.destroy({ where: { email: 'testPaystack2@mailinator.com' } }); // remove created record
   });
 
   describe('Register Endpoint', () => {
     it('should return true', async (done) => {
       const registerData = {
-        email: 'testKorayUser@mailinator.com',
+        email: 'testPaystack2@mailinator.com',
         password: 'password',
         displayName: 'testName',
       };
@@ -27,9 +27,9 @@ describe('Authentication Module', () => {
       done();
     });
 
-    it('should throw an error when wrong email exists already', async (done) => {
+    it('should throw an error when email exists already', async (done) => {
       const registerData = {
-        email: 'testKorayUser@mailinator.com',
+        email: 'testPaystack@mailinator.com',
         password: 'password',
         displayName: 'testName',
       };
@@ -44,7 +44,7 @@ describe('Authentication Module', () => {
 
     it('should throw an error when displayName exists already', async (done) => {
       const registerData = {
-        email: 'testKorayUser@mailinator.com',
+        email: 'testPaystack@mailinator.com',
         password: 'password',
         displayName: 'testName',
       };
@@ -71,7 +71,7 @@ describe('Authentication Module', () => {
   describe('Login Endpoint', () => {
     it('should return user token and display name when called', async (done) => {
       const loginData = {
-        email: 'testKorayUser@mailinator.com',
+        email: 'testPaystack@mailinator.com',
         password: 'password',
       };
       const res = await request(app).post('/api/auth/login').send(loginData).set('Accept', 'application/json');
@@ -101,7 +101,7 @@ describe('Authentication Module', () => {
 
     it('should throw an error when wrong password is sent', async (done) => {
       const loginData = {
-        email: 'testKorayUser@mailinator.com',
+        email: 'testPaystack@mailinator.com',
         password: 'password22',
       };
       const res = await request(app).post('/api/auth/login').send(loginData).set('Accept', 'application/json');
@@ -127,7 +127,7 @@ describe('Authentication Module', () => {
   describe('Forgot Password Endpoint', () => {
     it('should return true if all is good', async (done) => {
       const data = {
-        email: 'testKorayUser@mailinator.com',
+        email: 'testPaystack@mailinator.com',
       };
       const res = await request(app).post('/api/auth/password/forgot').send(data).set('Accept', 'application/json');
       expect.assertions(4);

@@ -12,7 +12,7 @@ class ConfigService implements ConfigInterface {
   }
 
   get<T = any>(propertyPath: string, defaultValue?: T): T | undefined {
-    return this.config[propertyPath] as T || defaultValue;
+    return (this.config[propertyPath] as T) || defaultValue;
   }
 
   static getInstance(): ConfigService {

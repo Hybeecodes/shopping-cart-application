@@ -18,7 +18,7 @@ export class CartController {
       const userId = req['user']['id'];
       const response = await this.cartService.addProductToCart(userId, req.body as AddProductToCartRequestDto);
       const resObj = new ResponseDto(ResponseStatus.SUCCESS, SuccessMessages.ADD_TO_CART_SUCCESS, response);
-      return res.status(HttpStatus.OK).send(resObj);
+      return res.status(HttpStatus.CREATED).send(resObj);
     } catch (e) {
       next(e);
     }

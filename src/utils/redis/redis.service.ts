@@ -7,7 +7,7 @@ export class RedisService {
 
   constructor() {
     this.client = redis.createClient({
-      url: configService.get<string>('REDIS_URL', 'redis://localhost:6379')
+      url: configService.get<string>('REDIS_URL', 'redis://localhost:6379'),
     });
     this.client.on('error', function (error) {
       console.error(error);

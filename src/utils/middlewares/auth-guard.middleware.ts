@@ -35,8 +35,7 @@ export class AuthGuardMiddleware {
       const { email } = this.jwtService.verifyToken(token);
       return await this.userService.getUserByEmail(email);
     } catch (error) {
-      const message = `Token error: ${error.message || error.name}`;
-      throw new HttpException(message, HttpStatus.UNAUTHORIZED);
+      throw new HttpException(ErrorMessages.INVALID_AUTH_TOKEN_SUPPLIED, HttpStatus.UNAUTHORIZED);
     }
   }
 }
