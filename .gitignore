@@ -65,3 +65,5 @@ typings/
 
 #dist - compiled javascript folder
 dist
+
+package-lock.json
