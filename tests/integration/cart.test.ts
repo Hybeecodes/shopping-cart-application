@@ -13,7 +13,7 @@ describe('Cart Module', () => {
   beforeEach(() => {
     jwtService = new JwtService();
     // get token
-    token = jwtService.signPayload({ email: 'testPaystack@mailinator.com' });
+    token = jwtService.signPayload({ email: 'paystackUser@mailinator.com' });
     console.log(token);
   });
   describe('Add Product to Cart', () => {
