@@ -17,6 +17,12 @@ For development, you will only need Node.js, a node global package, npm, MySQL a
       $ sudo apt install nodejs
       $ sudo apt install npm
 
+- #### Node installation on macOS
+
+  You can install nodejs and npm easily with brew install, just run the following commands.
+
+      $ brew install node
+
 ### MySQL
 - ### Installation
   
