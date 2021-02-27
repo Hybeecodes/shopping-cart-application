@@ -8,7 +8,7 @@ import { SuccessMessages } from '../../src/constants/success-messages.enum';
 
 describe('Authentication Module', () => {
   afterAll(async () => {
-    await User.destroy({ where: { email: 'paystackUser@mailinator.com' } }); // remove created record
+    await User.destroy({ where: { email: 'paystackUser2@mailinator.com' } }); // remove created record
   });
 
   describe('Register Endpoint', () => {
