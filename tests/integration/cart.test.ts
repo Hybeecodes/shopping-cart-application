@@ -14,7 +14,6 @@ describe('Cart Module', () => {
     jwtService = new JwtService();
     // get token
     token = jwtService.signPayload({ email: 'paystackUser@mailinator.com' });
-    console.log(token);
   });
   describe('Add Product to Cart', () => {
     it('should throw an error if product does not exist', async (done) => {
@@ -28,7 +27,6 @@ describe('Cart Module', () => {
         .send(data)
         .set('Accept', 'application/json');
       expect.assertions(3);
-      console.log(res.error);
       expect(res.status).toBe(HttpStatus.NOT_FOUND);
       expect(res.body.status).toBe(ResponseStatus.ERROR);
       expect(res.body.message).toBe(ErrorMessages.PRODUCT_NOT_FOUND);

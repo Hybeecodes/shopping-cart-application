@@ -43,7 +43,7 @@ For development, you will only need Node.js, a node global package, npm, MySQL a
 - Create a ```.env``` file
 - Copy the contents of ```.env.sample``` into the ```.env``` file
 - You can replace the database credentials if necessary
-- Also, you should set the mail credentials in the ```.env``` file
+- Also, you should set the mail credentials in the ```.env``` file (test will fail if this is not done)
 - Create the database on your local MySQL instance
 - Run the ````setup.sh```` file in the project root. \
 If you got a permission error, please run ```chmod +x setup.sh``` to change permission, then try again.\
